@@ -1,11 +1,13 @@
 import React from 'react'
 
+import logoImg from '../assets/logo.jpg'
+
 export default function Header() {
   return (
-    <header>
-      <div>
-        <img/>
-        <h1></h1>
+    <header id='main-header'>
+      <div id='title'>
+        <img src={logoImg}/>
+        <h1>FoodApp</h1>
       </div>
       <nav>
         <button>Cart (0)</button>
