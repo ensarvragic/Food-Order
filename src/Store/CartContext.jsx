@@ -7,11 +7,19 @@ const CartContext = createContext({
 });
 
 function cartReducer(state, action) {
-    if (action.type === '')
+    if (action.type === 'ADD_ITEM'){
+        state.items.push(action.item)
+    }
+
+    if (action.type === 'REMOVE_ITEM'){
+        // .... remove an item from the state 
+    }
+
+    return state;
 }
 
 export function CartContextProvider({children}) {
-    useReducer();
+    useReducer(cartReducer, { items: [] });
 
     return <CartContext.Provider>{children}</CartContext.Provider>
 }
