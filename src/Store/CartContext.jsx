@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useReducer } from "react";
 
 const CartContext = createContext({
     items: [],
@@ -6,6 +6,14 @@ const CartContext = createContext({
     removeItem: (id) => {}
 });
 
-function CartContextProvider({children}) {
+function cartReducer(state, action) {
+    if (action.type === '')
+}
+
+export function CartContextProvider({children}) {
+    useReducer();
+
     return <CartContext.Provider>{children}</CartContext.Provider>
 }
+
+export default CartContext;
