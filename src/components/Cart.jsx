@@ -20,7 +20,7 @@ export default function Cart() {
   }
 
   function handleGoToCheckout() {
-    userProgressContext.showCheckout();
+    userProgressCtx.showCheckout();
   }
 
   return (

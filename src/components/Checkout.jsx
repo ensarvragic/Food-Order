@@ -4,7 +4,7 @@ import CartContext from "../Store/CartContext";
 import { currencyFormatter } from "../util/formatting";
 import Input from "./UI/Input";
 import Button from "./UI/Button";
-import { UserProgressContext } from "../Store/UserProgressContext";
+import  UserProgressContext from "../Store/UserProgressContext";
 
 export default function Checkout() {
   const cartCtx = useContext(CartContext);
