@@ -4,7 +4,7 @@ import CartContext from "../Store/CartContext";
 import { currencyFormatter } from "../util/formatting";
 import Input from "./UI/Input";
 import Button from "./UI/Button";
-import  UserProgressContext from "../Store/UserProgressContext";
+import UserProgressContext from "../Store/UserProgressContext";
 
 export default function Checkout() {
   const cartCtx = useContext(CartContext);
@@ -23,9 +23,20 @@ export default function Checkout() {
     event.preventDefault();
 
     const fd = new FormData(event.target);
-    const customerData = Object.fromEntries(fd.entries())
+    const customerData = Object.fromEntries(fd.entries());
 
-    fetch('https://localhost:3000/orders')
+    fetch("https://localhost:3000/orders", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        order: {
+          items, 
+          customer: customerData
+        }
+      })
+    });
   }
 
   return (
@@ -34,7 +45,7 @@ export default function Checkout() {
         <h2>Checkout</h2>
         <p>Total Amount: {currencyFormatter.format(cartTotal)}</p>
 
-        <Input label="Full Name" type="text" id="full-name" />
+        <Input label="Full Name" type="text" id="name" />
         <Input label="E-Mail Adress" type="email" id="email" />
         <Input label="Street" type="text" id="street" />
         <div className="control-row">
