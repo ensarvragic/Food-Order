@@ -25,7 +25,7 @@ export default function Checkout() {
     const fd = new FormData(event.target);
     const customerData = Object.fromEntries(fd.entries())
 
-    
+    fetch('https://localhost:3000/orders')
   }
 
   return (
