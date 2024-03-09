@@ -233,6 +233,16 @@ h1 {
 .text-button:active {
   color: #ffab04;
 }
+.error{
+  display: block;
+  margin-left: 25%;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(154, 34, 34);
+  width: 50%;
+  border-radius: 10px;
+  max-height: 100vh;
+}
 
 .modal {
   background-color: #e4ddd4;
