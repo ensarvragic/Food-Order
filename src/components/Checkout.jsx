@@ -32,7 +32,7 @@ export default function Checkout() {
       },
       body: JSON.stringify({
         order: {
-          items, 
+          items: cartCtx.items, 
           customer: customerData
         }
       })
