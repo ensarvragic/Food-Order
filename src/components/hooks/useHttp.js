@@ -19,18 +19,20 @@ export default function useHTTP(url, config, initialData) {
 
   const sendRequest = useCallback(
     async function sendRequest() {
-    setIsLoading(true);
-    try {
-      const resData = await sendHttpRequest(url, config);
-      setData(resData);
-    } catch (error) {
-      setError(error.message || "Something went wrong");
-    }
-    setIsLoading(false);
-  }, [url, config]);
+      setIsLoading(true);
+      try {
+        const resData = await sendHttpRequest(url, config);
+        setData(resData);
+      } catch (error) {
+        setError(error.message || "Something went wrong");
+      }
+      setIsLoading(false);
+    },
+    [url, config]
+  );
 
   useEffect(() => {
-    if ((config && (config.method === "GET" || config.method)) || !config) {
+    if ((config && (config.method === "GET" || !config.method)) || !config) {
       sendRequest();
     }
   }, [sendRequest, config]);
