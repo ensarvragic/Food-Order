@@ -12,8 +12,8 @@ async function sendHttpRequest(url, config) {
   return resData;
 }
 
-export default function useHTTP(url, config) {
-  const [data, setData] = useState();
+export default function useHTTP(url, config, initialData) {
+  const [data, setData] = useState(initialData);
   const [error, setError] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
