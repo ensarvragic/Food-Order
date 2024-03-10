@@ -138,5 +138,12 @@
     "price": "8.99",
     "description": "Crispy falafels wrapped in a warm pita with lettuce, tomatoes, and a tahini sauce.",
     "image": "images/falafel-wrap.jpg"
+  },
+  {
+    "id": "m10",
+    "name": "Vegan Buddha Bowl",
+    "price": "11.99",
+    "description": "A hearty bowl filled with quinoa, roasted veggies, avocado, and a tahini dressing.",
+    "image": "images/vegan-buddha-bowl.jpg"
   }
 ]

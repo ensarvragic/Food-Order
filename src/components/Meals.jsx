@@ -9,7 +9,7 @@ export default function Meals() {
     data: loadedMeals,
     isLoading,
     error,
-  } = useHTTP("http://localhost:3000/mealss", requestConfig, []);
+  } = useHTTP("http://localhost:3000/meals", requestConfig, []);
 
 
   if (isLoading) {
