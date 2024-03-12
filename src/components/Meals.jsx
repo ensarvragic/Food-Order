@@ -1,5 +1,5 @@
 import Mealitem from "./Mealitem";
-import useHTTP from "./hooks/useHTTP";
+import useHTTP from "./hooks/useHttp";
 import Error from "./Error";
 
 const requestConfig = {};
